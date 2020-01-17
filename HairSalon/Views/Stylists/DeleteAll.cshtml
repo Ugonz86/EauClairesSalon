@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+@model List<HairSalon.Models.Stylist>;
+<h2>Are you sure you want to delete all stylists?</h2>
+<br>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="DeleteAll" />
+}
+
+<br>
+<br>
+@Html.ActionLink("Back to Stylists", "Index")
