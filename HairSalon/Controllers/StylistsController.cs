@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using HairSalon.Models;
 
 namespace HairSalon.Controllers
 {
@@ -49,6 +49,49 @@ namespace HairSalon.Controllers
         public ActionResult Edit(Stylist stylist)
         {
         _db.Entry(stylist).State = EntityState.Modified;
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+        }
+
+        public ActionResult Delete(int id)
+        {
+        var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+        return View(thisStylist);
+        }
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+        var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+        var stylistClients = _db.Clients.Where(clients => clients.StylistId == id).ToList();
+        foreach(var client in stylistClients) {
+            _db.Clients.Remove(client);
+        }
+        _db.Stylists.Remove(thisStylist);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteAll()
+        {
+        var allStylists = _db.Stylists.ToList();
+        return View();
+        }
+
+        [HttpPost, ActionName("DeleteAll")]
+        public ActionResult DeleteAllConfirmed()
+        {
+        var allClients = _db.Clients.ToList();
+        var allStylists = _db.Stylists.ToList();
+
+        foreach (var client in allClients)
+        {
+        _db.Clients.Remove(client);
+        }
+
+        foreach (var stylist in allStylists)
+        {
+        _db.Stylists.Remove(stylist);
+        }
         _db.SaveChanges();
         return RedirectToAction("Index");
         }
