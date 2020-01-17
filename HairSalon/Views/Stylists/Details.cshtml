@@ -5,7 +5,7 @@
 @model HairSalon.Models.Stylist;
 <h3>Stylist Profile</h3>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.StylistName): @Html.DisplayFor(model => model.StylistName)</h3>
+<h3><b>@Html.DisplayFor(model => model.StylistName)</b></h3>
 <ul>
   @if (@Model.Clients.Count == 0)
   {
@@ -17,13 +17,14 @@ else
   @foreach (Client client in @Model.Clients)
   {
     <ul>@client.ClientFullName | @client.Stylist.StylistName</ul>
+    @* <li>@client.Stylist.StylistName | @Html.ActionLink($"{client.ClientFullName}", "Details", new { id = client.ClientId })</li> *@
   }
 }
+
 </ul>
 <hr />
 
-
 <p>@Html.ActionLink("Add Client", "Create", "Clients")</p>
-<p>@Html.ActionLink("Edit Stylist", "Edit")</p>
-<p>@Html.ActionLink("Delete Stylist", "Delete")</p>
+<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
+<p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
 <p>@Html.ActionLink("Back to stylists", "Index")</p>
