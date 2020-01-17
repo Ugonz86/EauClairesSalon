@@ -1,7 +1,6 @@
 @{
   Layout = "_Layout";
 }
-@* @using HairSalon.Models; *@
 @model HairSalon.Models.Client
 <h2>Client Profile</h2>
 <hr />
@@ -9,5 +8,6 @@
 <h3>@Html.DisplayFor(model => model.ClientFullName)</h3>
 
 <hr />
+<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
 <p>@Html.ActionLink("Back to Clients", "Index")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
