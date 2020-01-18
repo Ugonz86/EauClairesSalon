@@ -18,7 +18,7 @@ The user can:
 1. Clone this repository:
 
   ```sh
-  $git clone https://github.com/Ugonz86/EauClaireSalon.git
+  $git clone https://github.com/Ugonz86/EauClairesSalon.git
   $cd EauClairesSalon.Solution/HairSalon
   $dotnet restore
   $dotnet run
