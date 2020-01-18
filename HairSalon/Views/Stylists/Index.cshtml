@@ -6,9 +6,15 @@
 @{
   Layout = "_Layout";
 }
-<h1>Stylists</h1>
+<h2>Stylists</h2>
 <hr />
 
+@* <form asp-controller="Stylists" asp-action="Index">
+    <p>
+        <input type="text" class="searchBar" name="SearchStylist" placeholder="Type Stylist Name Here">
+        <button class="btn btn-success" type="submit" value="Filter">Find Stylist</button>
+    </p>
+</form> *@
 @if (@Model.Count == 0)
 {
 <h3>The stylist list is empty!</h3>
@@ -16,10 +22,10 @@
 
 @foreach (Stylist stylist in Model)
 {
-<ul>@Html.ActionLink($"{stylist.StylistName}", "Details", new { id = stylist.StylistId })</ul>
+<h3><b>@Html.ActionLink($"{stylist.StylistName}", "Details", new { id = stylist.StylistId })</b></h3>
 }
 
 <hr />
-<p>@Html.ActionLink("Add New Stylist", "Create")</p>
-<p>@Html.ActionLink("Delete All Stylists", "DeleteAll")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<h4>@Html.ActionLink("Add New Stylist", "Create")</h4>
+<h4>@Html.ActionLink("Delete All Stylists", "DeleteAll")</h4>
+<h4>@Html.ActionLink("Home", "Index", "Home")</h4>

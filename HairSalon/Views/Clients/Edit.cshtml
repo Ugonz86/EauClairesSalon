@@ -5,20 +5,18 @@
 <h2>Edit Client</h2>
 <hr />
 
-<h4>Edit: @Html.DisplayFor(model => model.ClientName)</h4>
+<h3>Edit: @Html.DisplayFor(model => model.ClientName)</h3>
 <br>
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.ClientId)
-
-    @Html.LabelFor(model => model.ClientName)
-    @Html.EditorFor(model => model.ClientName)
-
-    @Html.LabelFor(model => model.Stylist)
+    @Html.HiddenFor(model => model.ClientId, new { @class = "textBox" })
+    @Html.LabelFor(model => model.ClientName, "Client Name", new { @class = "textBox" })
+    @Html.EditorFor(model => model.ClientName, new { @class = "textBox" })
+    @Html.LabelFor(model => model.Stylist, new { @class = "textBox" })
     @Html.DropDownList("StylistId")
-
-    <input type="submit" value="Save" />
+    <br>
+    <button class="btn btn-success" type="submit" value="Save">Submit</button>
 }
 <hr />
-<p>@Html.ActionLink("Back Clients", "Index")</p>
+<h4>@Html.ActionLink("Back Clients", "Index")</h4>

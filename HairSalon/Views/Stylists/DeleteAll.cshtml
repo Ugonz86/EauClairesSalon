@@ -7,9 +7,8 @@
 
 @using (Html.BeginForm())
 {
-    <input type="submit" value="DeleteAll" />
+    <button class="btn btn-success" type="submit" value="DeleteAll">Delete All Stylists</button>
 }
 
-<br>
-<br>
-@Html.ActionLink("Back to Stylists", "Index")
+<hr>
+<h4>@Html.ActionLink("Back to Stylists", "Index")</h4>

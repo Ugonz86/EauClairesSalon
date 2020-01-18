@@ -1,0 +1,95 @@
+html {
+  height: 100%;
+  background:url(https://cdn.pixabay.com/photo/2017/08/06/06/54/salon-2589649_1280.jpg);
+  min-height: 100%;
+  background-color: black;
+  background-size: cover;
+}
+
+div.header {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  color:#adadad;
+  background: rgba(0, 0, 0, 0.80);
+  padding:5px;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+body {
+  background-color: transparent;
+  margin: 0 auto;
+  max-width: 1200px;
+  max-height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+div.container
+{
+  margin-top: 300px;
+  text-align: center;
+  color:#adadad;
+  background-color: rgba(0, 0, 0, 0.80);
+  border-radius: 10px;
+  width: 600px;
+  letter-spacing: 4px;
+  padding-bottom: 10px;
+} 
+
+a {
+  color:#16d971;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #52ffa8;
+  text-decoration: none;
+}
+
+.btn-success { 
+  background-color: #2dcf79;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #52ffa8;
+  border: none;
+}
+
+.textBox {
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+}
+
+/* .searchBar {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  width: 300px;
+} */
+
+hr {
+  border-color: rgba(0, 0, 0, 0.80);
+}
+
+div.footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#adadad;
+  background:rgba(0, 0, 0, 0.80);
+  padding:10px;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 3px;
+}

@@ -2,18 +2,18 @@
   Layout = "_Layout";
 }
 @model HairSalon.Models.Client
-<h1>New Client Form</h1>
+<h2>New Client Form</h2>
+<hr>
 
 @using (Html.BeginForm())
 {
-    @Html.Label("clientname", "Full Name")
-    @Html.TextBoxFor(model => model.ClientName)
-
-    @Html.LabelFor(model => model.Stylist)
+    @Html.Label("clientname", "Full Name", new { @class = "textBox" })
+    @Html.TextBoxFor(model => model.ClientName, new { @class = "textBox" })
+    @Html.LabelFor(model => model.Stylist, new { @class = "textBox" })
     @Html.DropDownList("StylistId")
-
-    <input type="submit" value="Submit!" class="btn btn-default" />
+    <br>
+    <button class="btn btn-success" type="submit" value="Submit!" class="btn btn-default">Submit</button>
 }
 
 <hr />
-<p>@Html.ActionLink("All Clients", "Index")</p>
+<h4>@Html.ActionLink("Client Overview", "Index")</h4>

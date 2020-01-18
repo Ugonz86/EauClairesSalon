@@ -2,27 +2,26 @@
   Layout = "_Layout";
 }
 @using HairSalon.Models;
-<h3>Stylist Profile</h3>
+<h2>Stylist Profile</h2>
 <hr />
-<h3><b>@Model["stylist"].StylistName</b></h3>
-<ul>
+<h3><b>@Model["stylist"].StylistName's clients:</b></h3>
+<br>
+
   @if (@Model["clients"].Count == 0)
   {
-    <p>No Clients found</p>
+    <h4><i>No Clients found</i></h4>
   }
 else
 {
-  <h4>Clients:</h4>
   @foreach (Client client in @Model["clients"])
   {
-    <ul>@client.ClientName</ul>
+    <h3>@Html.ActionLink($"{client.ClientName}", "Details", new { id = client.ClientId })</h3>
   }
 }
 
-</ul>
 <hr />
 
-<p>@Html.ActionLink("Add Client", "Create", "Clients")</p>
-<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = @Model["stylist"].StylistId })</p>
-<p>@Html.ActionLink("Delete Stylist", "Delete", new { id = @Model["stylist"].StylistId })</p>
-<p>@Html.ActionLink("Back to stylists", "Index")</p>
+<h4>@Html.ActionLink("Add Client", "Create", "Clients")</h4>
+<h4>@Html.ActionLink("Edit Stylist", "Edit", new { id = @Model["stylist"].StylistId })</h4>
+<h4>@Html.ActionLink("Delete Stylist", "Delete", new { id = @Model["stylist"].StylistId })</h4>
+<h4>@Html.ActionLink("Stylist Overview", "Index")</h4>
