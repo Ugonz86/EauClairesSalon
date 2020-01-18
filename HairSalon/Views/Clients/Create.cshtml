@@ -6,8 +6,8 @@
 
 @using (Html.BeginForm())
 {
-    @Html.Label("clientfullname", "Full Name")
-    @Html.TextBoxFor(model => model.ClientFullName)
+    @Html.Label("clientname", "Full Name")
+    @Html.TextBoxFor(model => model.ClientName)
 
     @Html.LabelFor(model => model.Stylist)
     @Html.DropDownList("StylistId")

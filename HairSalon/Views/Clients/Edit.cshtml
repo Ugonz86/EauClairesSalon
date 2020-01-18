@@ -5,15 +5,15 @@
 <h2>Edit Client</h2>
 <hr />
 
-<h4>Edit: @Html.DisplayFor(model => model.ClientFullName)</h4>
+<h4>Edit: @Html.DisplayFor(model => model.ClientName)</h4>
 <br>
 
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.ClientId)
 
-    @Html.LabelFor(model => model.ClientFullName)
-    @Html.EditorFor(model => model.ClientFullName)
+    @Html.LabelFor(model => model.ClientName)
+    @Html.EditorFor(model => model.ClientName)
 
     @Html.LabelFor(model => model.Stylist)
     @Html.DropDownList("StylistId")
