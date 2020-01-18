@@ -1,4 +1,4 @@
-# Eau Claire Salon _01/17/2020_
+# Eau Claire's Salon _01/17/2020_
 
 ## By _**Uriel Gonzalez**_
 
