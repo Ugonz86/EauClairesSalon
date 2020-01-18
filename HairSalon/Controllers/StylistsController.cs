@@ -35,8 +35,12 @@ namespace HairSalon.Controllers
 
         public ActionResult Details(int id)
         {
+            Dictionary<string, object> model = new Dictionary<string, object>();
             Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-            return View(thisStylist);
+            var stylistClients = _db.Clients.Where(clients => clients.StylistId == id).ToList();
+            model.Add("stylist", thisStylist);
+            model.Add("clients", stylistClients);
+            return View(model);
         }
 
         public ActionResult Edit(int id)
