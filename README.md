@@ -8,17 +8,14 @@ A C# and .NET Database Basics Project - This build out application uses a one-to
 
 The user can:
 
-1. Add, view, edit and delete stylists
-2. See a list of stylists
-3. Add, view, edit and delete clients
-4. Delete the stylist list
-5. Delete the client list
+1. Add, view, edit and delete one or multiple stylists.
+2. Add, view, edit and delete one or multiple clients.
 
 ## Setup/Installation Requirements
 
 * This application requires MySQL.
 
-1; Clone this repository:
+1. Clone this repository:
 
   ```sh
   $git clone https://github.com/Ugonz86/EauClaireSalon.git
@@ -27,7 +24,7 @@ The user can:
   $dotnet run
   ```
 
-2; Open the App Settings file (EauClaireSalon/HairSalon/appsettings.json) and ensure that the MySQL username and password matches your MySQL credentials. database: uriel_gonzalez / password: epicodus
+2. Open the App Settings file (EauClaireSalon/HairSalon/appsettings.json) and ensure that the MySQL username and password matches your MySQL credentials. database: uriel_gonzalez / password: epicodus
 
 ## Database Setup
 
