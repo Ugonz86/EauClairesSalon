@@ -8,8 +8,8 @@ A C# and .NET Database Basics Project - This build out application uses a one-to
 
 The user can:
 
-1. Add, view, edit and delete one or multiple stylists.
-2. Add, view, edit and delete one or multiple clients.
+1. Add, view, edit, search and delete one or multiple stylists.
+2. Add, view, edit, search and delete one or multiple clients.
 
 ## Setup/Installation Requirements
 
@@ -24,14 +24,14 @@ The user can:
   $dotnet run
   ```
 
-2. Open the App Settings file (EauClaireSalon/HairSalon/appsettings.json) and ensure that the MySQL username and password matches your MySQL credentials. database: uriel_gonzalez / password: epicodus
+2. Open the App Settings file (EauClaireSalon/HairSalon/appsettings.json) and ensure that the MySQL username and password matches your MySQL credentials.
 
 ## Database Setup
 
 ```sh
 1. CREATE DATABASE `uriel_gonzalez`
 2. USE `uriel_gonzalez`
-3. CREATE TABLE `clients` (`ClientId` int(11) NOT NULL AUTO_INCREMENT, `ClientFullName` varchar(255) DEFAULT NULL, `StylistId` int(11) DEFAULT NULL, PRIMARY KEY (`ClientId`))
+3. CREATE TABLE `clients` (`ClientId` int(11) NOT NULL AUTO_INCREMENT, `ClientName` varchar(255) DEFAULT NULL, `StylistId` int(11) DEFAULT NULL, PRIMARY KEY (`ClientId`))
 4. CREATE TABLE `stylists` (`StylistId` int(11) NOT NULL AUTO_INCREMENT, `StylistName` varchar(255) DEFAULT NULL, PRIMARY KEY (`StylistId`))
 5. Run program in command line with dotnet run (or $ dotnet watch run).
 
@@ -39,7 +39,7 @@ The user can:
 
 ## Known Bugs
 
-* No known bugs at this time.
+* Currently, the search bar in the clients page is case sensitive when the user searches for a client. I am doing my research to resolve the issue apparently related to the method Include(). The search bar in the stylists page is not experiencing that issue.
 
 ## Technologies Used
 
