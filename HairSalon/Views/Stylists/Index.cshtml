@@ -3,18 +3,16 @@
 }
 @using HairSalon.Models;
 @model List<HairSalon.Models.Stylist>;
-@{
-  Layout = "_Layout";
-}
 <h2>Stylists</h2>
 <hr />
 
-@* <form asp-controller="Stylists" asp-action="Index">
+<form asp-controller="Stylists" asp-action="Index">
     <p>
-        <input type="text" class="searchBar" name="SearchStylist" placeholder="Type Stylist Name Here">
-        <button class="btn btn-success" type="submit" value="Filter">Find Stylist</button>
+        <i class="fa fa-search"></i> <input type="text" class="searchBar" name="SearchStylist" placeholder="Find Stylist. Type Stylist Name Here and Press Enter.">
     </p>
-</form> *@
+</form>
+
+<hr />
 @if (@Model.Count == 0)
 {
 <h3>The stylist list is empty!</h3>

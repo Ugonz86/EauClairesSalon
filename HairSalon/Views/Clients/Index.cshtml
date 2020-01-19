@@ -6,6 +6,14 @@
 <h2>Clients</h2>
 <hr />
 
+<form asp-controller="Clients" asp-action="Index">
+    <p>
+        <i class="fa fa-search"></i> <input type="text" class="searchBar" name="SearchClient" placeholder="Find Clients. Type Client Name Here and Press Enter.">
+    </p>
+</form>
+
+<hr />
+
 @if (@Model.Count == 0)
 {
   <h3>No clients have been added yet!</h3>
@@ -13,7 +21,7 @@
 
 @foreach (Client client in Model)
 {
-  <h3>@Html.ActionLink($"{client.ClientName}", "Details", new { id = client.ClientId }) | Stylist: <b>@Html.ActionLink($"{client.Stylist.StylistName}", "Details", "Stylists", new { id = client.Stylist.StylistId })</b></h3>
+  <h3>@Html.ActionLink($"{client.ClientName}", "Details", new { id = client.ClientId }) | Stylist: <b>@Html.ActionLink($"{client.Stylist.StylistName}", "Details", "Stylists", new { id = client.StylistId })</b></h3>
   
 }
 
