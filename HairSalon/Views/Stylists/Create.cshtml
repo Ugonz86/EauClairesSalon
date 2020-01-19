@@ -7,7 +7,7 @@
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.StylistName, "Stylist Name", new { @class = "textBox" })
-    @Html.TextBoxFor(model => model.StylistName, new { @class = "textBox" })
+    @Html.TextBoxFor(model => model.StylistName, new { placeholder = "Type Name Here", @class = "textBox" })
     <br>
     <button class="btn btn-success" type="submit" value="Add new stylist">Add Stylist</button>
 }
