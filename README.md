@@ -39,7 +39,7 @@ The user can:
 
 ## Known Bugs
 
-* Currently, the search bar in the clients page (Views/Index) is case sensitive.. I am doing my research to resolve the issue apparently related to the method Include(). The search bar in the stylists page is not experiencing that issue.
+* Currently, the search bar in the clients page (Views/Index) is case sensitive. I am doing my research to resolve the issue apparently related to the method Include(). The search bar in the stylists page is not experiencing that issue.
 
 ## Technologies Used
 
