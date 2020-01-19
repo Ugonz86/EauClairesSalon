@@ -1,9 +1,9 @@
 html {
   height: 100%;
-  background:url(https://cdn.pixabay.com/photo/2017/08/06/06/54/salon-2589649_1280.jpg);
-  min-height: 100%;
+  background:url(https://cdn.pixabay.com/photo/2017/08/06/06/54/salon-2589649_1280.jpg)no-repeat center center fixed;
   background-color: black;
   background-size: cover;
+  min-height: 100%;
 }
 
 div.header {
@@ -23,20 +23,20 @@ body {
   background-color: transparent;
   margin: 0 auto;
   max-width: 1200px;
-  max-height: 100%;
   font-family: 'Raleway', sans-serif;
 }
 
 div.container
 {
-  margin-top: 300px;
   text-align: center;
   color:#adadad;
   background-color: rgba(0, 0, 0, 0.80);
   border-radius: 10px;
-  width: 600px;
+  width: 700px;
   letter-spacing: 4px;
   padding-bottom: 10px;
+  margin-top: 300px;
+  margin-bottom: 100px;
 } 
 
 a {
@@ -50,7 +50,7 @@ a:hover {
 }
 
 .btn-success { 
-  background-color: #2dcf79;
+  background-color: #16d971;
   border: none;
 }
 
@@ -67,15 +67,23 @@ a:hover {
   outline: none;
 }
 
-/* .searchBar {
+.searchBar {
   background-color: transparent;
   border: none;
   outline: none;
   text-align: center;
   font-style: italic;
-  font-size: 20px;
-  width: 300px;
-} */
+  font-weight: bold;
+  font-size: 15px;
+  color: #adadad;
+  width: 600px;
+  letter-spacing: 4px;
+}
+
+.searchBar:hover {
+  background-color: transparent;
+
+}
 
 hr {
   border-color: rgba(0, 0, 0, 0.80);
