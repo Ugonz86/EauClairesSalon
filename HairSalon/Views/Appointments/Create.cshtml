@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+@model HairSalon.Models.Appointment
+<h2>New Appointment</h2>
+<hr>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Stylist, new { @class = "textBox"})
+    @Html.DropDownList("StylistId", null, new { @class = "textBox"})
+    <br>
+    @Html.LabelFor(model => model.Client, new { @class = "textBox"})
+    @Html.DropDownList("ClientId", null, new { @class = "textBox"})
+    <br>
+    @Html.LabelFor(model => model.DateTime, "Date & Time", new { @class = "textBox"})
+    @Html.EditorFor(model => model.DateTime, new { htmlAttributes = new {@class = "form-control multi-line textBox"}})
+    <br>
+    <button class="btn btn-success" type="submit" value="Submit!" class="btn btn-default">Submit</button>
+}
+
+<hr />
+<h4>@Html.ActionLink("Appointments Overview", "Index")</h4>

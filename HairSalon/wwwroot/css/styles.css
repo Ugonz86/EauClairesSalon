@@ -66,6 +66,8 @@ a:hover {
   border: none;
   outline: none;
   background-color: transparent;
+  text-align: center;
+  color: #adadad;
 }
 
 .searchBar {
@@ -88,6 +90,7 @@ a:hover {
 
 hr {
   border-color: rgba(0, 0, 0, 0.80);
+  text-align: center;
 }
 
 div.footer {
