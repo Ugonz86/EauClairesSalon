@@ -10,7 +10,7 @@
     @Html.Label("clientname", "Full Name", new { @class = "textBox" })
     @Html.TextBoxFor(model => model.ClientName, new { placeholder = "Type Name here", @class = "textBox" })
     @Html.LabelFor(model => model.Stylist, new { @class = "textBox" })
-    @Html.DropDownList("StylistId")
+    @Html.DropDownList("StylistId", null, new { @class = "textBox" })
     <br>
     <button class="btn btn-success" type="submit" value="Submit!" class="btn btn-default">Submit</button>
 }
