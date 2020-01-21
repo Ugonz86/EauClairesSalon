@@ -10,6 +10,7 @@ The user can:
 
 1. Add, view, edit, search and delete one or multiple stylists.
 2. Add, view, edit, search and delete one or multiple clients.
+3. The user can make appointments.
 
 ## Setup/Installation Requirements
 
