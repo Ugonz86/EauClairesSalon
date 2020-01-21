@@ -29,11 +29,14 @@ The user can:
 ## Database Setup
 
 ```sh
-1. CREATE DATABASE `uriel_gonzalez`
-2. USE `uriel_gonzalez`
-3. CREATE TABLE `clients` (`ClientId` int(11) NOT NULL AUTO_INCREMENT, `ClientName` varchar(255) DEFAULT NULL, `StylistId` int(11) DEFAULT NULL, PRIMARY KEY (`ClientId`))
-4. CREATE TABLE `stylists` (`StylistId` int(11) NOT NULL AUTO_INCREMENT, `StylistName` varchar(255) DEFAULT NULL, PRIMARY KEY (`StylistId`))
-5. Run program in command line with dotnet run (or $ dotnet watch run).
+1. mysql start
+2. Access MySql by executing the command: `mysql -uroot -pepicodus`
+3. CREATE DATABASE `uriel_gonzalez`
+4. USE `uriel_gonzalez`
+5. CREATE TABLE `clients` (`ClientId` int(11) NOT NULL AUTO_INCREMENT, `ClientName` varchar(255) DEFAULT NULL, `StylistId` int(11) DEFAULT NULL, PRIMARY KEY (`ClientId`))
+6. CREATE TABLE `stylists` (`StylistId` int(11) NOT NULL AUTO_INCREMENT, `StylistName` varchar(255) DEFAULT NULL, PRIMARY KEY (`StylistId`))
+7. CREATE TABLE `appointments` (`AppointmentId` int(11) NOT NULL AUTO_INCREMENT, `StylistId` int(11) NOT NULL, `ClientId` int(11) NOT NULL, `DateTime` datetime(6) NOT NULL, PRIMARY KEY (`AppointmentId`))
+8. Run program with dotnet run (or $ dotnet watch run).
 
 ```
 
