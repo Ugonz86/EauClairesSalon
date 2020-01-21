@@ -4,7 +4,7 @@
 
 ### Description
 
-A C# and .NET Database Basics Project - This build out application uses a one-to-many relationship with Entity. The application includes two models, both with full CRUD functionality. With this functionality, the business owner will be able to add/read/edit the stylist's clientele.
+A C# and .NET Database Basics Project - This build out application uses a one-to-many relationship with Entity. The application includes three models, all with full CRUD functionality. The business owner will be able to add/read/edit/search/delete stylists, clients and appointments.
 
 The user can:
 
