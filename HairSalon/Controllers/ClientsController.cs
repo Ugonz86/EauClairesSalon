@@ -20,7 +20,7 @@ namespace HairSalon.Controllers
         {
             List<Client> model = _db.Clients.Include(clients => clients.Stylist).ToList();
             if(SearchClient!=null){
-                model = model.Where(clients => clients.ClientName.Contains(SearchClient)).ToList();
+                model = _db.Clients.Where(clients => clients.ClientName.Contains(SearchClient)).ToList();
             }
             return View(model);
         }
