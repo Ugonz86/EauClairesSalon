@@ -17,7 +17,7 @@ namespace HairSalon.Controllers
 
         public ActionResult Index(int id)
         {
-            List<Appointment> model = _db.Appointments.Include(clients => clients.Stylist).ToList();
+            List<Appointment> model = _db.Appointments.Include(clients => clients.Stylist).Include(clients => clients.Client).ToList();
             return View(model);
         }
 
